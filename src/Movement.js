@@ -20,6 +20,20 @@ class Movement extends Phaser.Scene {
     }
 
     update() {
+        if(cursors.left.isDown){
+            this.player.x -= this.PLAYER_VELOCITY
+        }
+        else if(cursors.right.isDown){
+            this.player.x += this.PLAYER_VELOCITY
+        }
+
+        if(cursors.up.isDown){
+            this.player.y -= this.PLAYER_VELOCITY
+        }
+        else if(cursors.down.isDown){
+            this.player.y += this.PLAYER_VELOCITY
+        }
+
         
     }
 }
