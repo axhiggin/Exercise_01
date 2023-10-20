@@ -20,6 +20,6 @@ class Movement extends Phaser.Scene {
     }
 
     update() {
-
+        
     }
 }
