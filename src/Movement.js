@@ -4,11 +4,19 @@ class Movement extends Phaser.Scene {
     }
 
     preload() {
-
+        this.load.spritesheet('character', './assets/spritesheets/Character_002.png', {
+            frameWidth: 48,
+            frameHeight: 48
+        })
     }
 
     create() {
-        console.log('now in movement scene 👍')
+        this.cameras.main.setBackgroundColor(0xDDDDDD)
+
+        this.player = this.add.sprite(width / 2, height / 2, 'character', 1).setScale(2)
+        this.PLAYER_VELOCITY = 5
+
+        cursors = this.input.keyboard.createCursorKeys()
     }
 
     update() {
